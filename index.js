@@ -23,7 +23,7 @@ function viewCart() {
   let i = 0;
 
   while(i < cart.length) {
-    arr.push(`${cart[i].itemName} at ${cart[i].itemPrice}`);
+    arr.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
     i++;
   }
 
