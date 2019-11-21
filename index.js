@@ -15,7 +15,24 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  if (cart.length === 0) {
+    return "Your shopping cart is empty.";
+  }
+
+  var arr = [];
+  let i = 0;
+
+  while(i < cart.length) {
+    arr.push(`${cart[i].itemName} at ${cart[i].itemPrice}`);
+    i++;
+  }
+
+  if(arr[1] !== undefined) {
+    arr[arr.length -1] = "and " + arr[arr.length -1];
+  }
+
+  let list = arr.join(', ');
+  return `In your cart, you have ${list}.`;
 }
 
 function total() {
