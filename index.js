@@ -36,7 +36,9 @@ function viewCart() {
 }
 
 function total() {
-  return cart.length;
+  while(cart.length !== 0) {
+    return cart.length;
+  }
 }
 
 function removeFromCart(item) {
